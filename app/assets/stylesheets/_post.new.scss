@@ -1,0 +1,42 @@
+.container {
+  background-color: rgba(248,248,248,0.8);
+  width: 960px;
+  margin: 0 auto;
+  border-radius: 10px;
+
+  h3 {
+    color: #808080;
+    font-size: 50px;
+    text-align: center;
+    padding-top: 10px;
+    margin-top: 40px;
+  }
+
+  .form-control {
+    margin-bottom: 10px;
+  }
+
+  .cursor {
+    cursor: pointer;
+  }
+
+  .input-default {
+    display: none;
+  }
+
+  .post-textarea {
+    height: 400px;
+  }
+
+  .submit-btn {
+    border: 2px solid #00bfff;
+    border-radius: 25px;
+    background-color: #00bfff;
+    color: #fff;
+    font-size: 20px;
+    height: 50px;
+    width: 100%;
+    margin-top: 10px;
+    margin-bottom: 20px;
+  }
+}

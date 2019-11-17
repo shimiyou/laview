@@ -1,0 +1,12 @@
+.main
+  .contents
+    .container
+      = form_for @post, url: album_posts_path do |f|
+        %h3
+          おもいで
+        = f.text_field :title, placeholder: "タイトル", class: 'form-control'
+        = f.label :image, for: 'input-image', class: 'form-control cursor' do
+          = fa_icon 'image'
+          = f.file_field :image, id: 'input-image', class: 'input-default'
+        = f.text_area :text, placeholder: "内容", class: 'form-control post-textarea'
+        = f.submit '追加', class: 'submit-btn'

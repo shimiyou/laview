@@ -1,0 +1,13 @@
+.album-contents
+  - @albums.each do |album|
+    = link_to album_path(album.id), class: 'album float' do
+      .album__name
+        = album.name
+      .album__image
+        = fa_icon 'book'
+
+.bird-icon.passing
+  = fa_icon 'fighter-jet'
+
+.pagination
+  = paginate @albums

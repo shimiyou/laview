@@ -1,0 +1,9 @@
+.create-wrapper
+  .contents
+    .container
+      %h3
+        おもいでを追加しました
+      %h4
+        さらに追加しますか？
+      = link_to "終了", album_path(@post.album_id), class: 'container-left-btn'
+      = link_to "続ける", new_album_post_path(params[:album_id]), class: 'container-right-btn new-album__btn'

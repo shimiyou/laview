@@ -1,0 +1,16 @@
+.notification {
+  position: fixed;
+  bottom: 0;
+  
+  .notice {
+    background-color: #38AEF0;
+    color: #fff;
+    text-align: center;
+  }
+
+  .alert {
+    background-color: #F35500;
+    color: #fff;
+    text-align: center;
+  }
+}

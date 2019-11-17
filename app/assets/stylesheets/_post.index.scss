@@ -1,0 +1,19 @@
+.main {
+  height: 100vh;
+  width: 100vw;
+  z-index: 1;
+
+  .contents {
+    padding: 80px 50px 0;
+
+    .content {
+      display: inline-block;
+      margin: 80px 88px 0;
+
+      &__image {
+        border: 5px solid #ff0000;
+      }
+    }
+  }
+}
+

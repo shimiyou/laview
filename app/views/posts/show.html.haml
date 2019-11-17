@@ -1,0 +1,10 @@
+.post-show-contents
+  .post-show-contents__content
+    %h1.post-show-contents__content__title
+      = @post.title
+    = image_tag @post.image.url, class:'post-show-contents__content--left__image'
+    %p.post-show-contents__content__text
+      = safe_join(@post.text.split("\n"),tag(:br))
+    = link_to '戻る', album_path(@post.album_id), class: 'return-btn'
+    = link_to '編集', edit_album_post_path(@post.album_id, @post.id), class: 'edit-btn'
+    = link_to '削除', album_post_path(@post.id), method: :delete, class: 'delete-btn', data: {confirm: '削除しますか？'}

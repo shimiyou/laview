@@ -1,0 +1,61 @@
+.album-contents {
+  padding-top: 80px;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+
+  .album {
+    margin: 55px 50px 0;
+    text-decoration: none;
+    overflow-x: scroll;
+    white-space: nowrap;
+
+    &__name {
+      background-color: #00bfff;
+      color: #fff;
+      width: 300px;
+      font-size: 30px;
+      font-weight: bold;
+      text-align: center;
+      border-radius: 30px;
+      word-break: break-all;
+      padding: 0 3px;
+    }
+
+    &__image {
+      color: #3cb371;
+      font-size: 200px;
+      text-align: center;
+      line-height: 10px;
+    }
+  }
+}
+
+.float {
+  animation: float_5694 4s linear infinite;
+  transform-origin: 50% 50%;
+}
+
+@keyframes float_5694 {
+  0% { transform: translateY(0) }
+  25% { transform: translateY(-6px) }
+  50% { transform: translateY(0) }
+  100% { transform: translateY(0) }
+}
+
+.bird-icon {
+  color: #fff;
+  font-size: 50px;
+}
+
+.passing {
+  animation: passing_1002 7s linear infinite;
+  transform-origin: 50% 50%;
+}
+
+@keyframes passing_1002 {
+  0% { transform:translateX(-50%); opacity:0 }
+  14.28571% { transform:translateX(0%); opacity:1 }
+  28.57143% { transform:translateX(50%); opacity:0 }
+  100% { transform:translateX(50%); opacity:0 }
+}

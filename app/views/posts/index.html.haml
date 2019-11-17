@@ -1,0 +1,5 @@
+.main
+  .contents
+    - @posts.each do |post|
+      = link_to post_path(post.id), class: 'content' do
+        = image_tag post.image.url, class: 'content-image'

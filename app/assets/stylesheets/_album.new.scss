@@ -1,0 +1,40 @@
+.new-album {
+  background-image: url('https://www.demachi.ne.jp/gakko/shogakko/images/sample/WEB-0047472-C.jpg');
+  background-repeat:  no-repeat;                         /* 画像の繰り返しを指定  */              
+  background-position:center center;                     /* 画像の表示位置を指定  */
+  background-size:contain;                               /* 画像のサイズを指定    */
+  width: 100%;                                            /* 横幅のサイズを指定    */
+  height: 650px;
+  margin-top: 120px;
+  text-align: center;
+  border-radius: 5px;
+
+  &-content {
+
+    &__top {
+      color: #808080;
+      padding-top: 160px;
+      font-size: 50px;
+      font-weight: bold;
+    }
+
+    &__form {
+      width: 500px;
+      margin: 60px 0;
+    }
+
+    &__btn {
+      background-color: #1e90ff;
+      color: #fff;
+      font-size: 19px;
+      padding: 8px 16px;
+      border-radius: 5px;
+
+      &:hover {
+        border: 2px solid #1e90ff;
+        background-color: #fff;
+        color: #1e90ff;
+      }
+    }
+  }
+}

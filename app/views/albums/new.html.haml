@@ -1,0 +1,6 @@
+.new-album
+  = form_for @album, class: 'new-album-content' do |f|
+    %h3.new-album-content__top
+      新しいアルバム
+    = f.text_field :name, placeholder: "アルバム名を入力してください", class: 'new-album-content__form form-control-lg'
+    = f.submit 'おもいで', class: 'new-album-content__btn'

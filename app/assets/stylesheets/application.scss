@@ -1,0 +1,100 @@
+@import "bootstrap";
+@import './album.index';
+@import './album.new';
+@import './album.show';
+@import './post.index';
+@import './post.new';
+@import './post.show';
+@import './post.create';
+@import './flash';
+@import './modal';
+@import './loading';
+@import 'font-awesome';
+
+body {
+  background-image: url('https://d1f5hsy4d47upe.cloudfront.net/8d/8d818b8a13aaf624ccf6fac5b19cacb0_t.jpeg');
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+}
+
+.header {
+  background-color: rgba(255,255,255,0.7);
+  height: 80px;
+  width: 100vw;
+  border-bottom: 1px solid #a9a9a9;
+  position: fixed;
+  top: 0;
+  z-index: 2;
+
+  &__content {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 200px;
+
+    &__left {
+      display: flex;
+      justify-content: space-between;
+
+      &__font-awesome {
+        color: #a9a9a9;
+        font-size: 70px;
+        line-height: 80px;
+        position: relative;
+      }
+
+      .logo {
+        color: #0000ff;
+        font-family: 'Londrina Shadow', cursive;
+        font-size: 40px;
+        line-height: 80px;  
+        display: block;
+        text-decoration: none;
+        position: absolute;
+      }
+    }
+
+    &__right {
+      line-height: 80px;
+      .new-album__btn {
+        background-color: #1e90ff;
+        color: #fff;
+
+        &:hover {
+          border: 2px solid #1e90ff;
+          background-color: #fff;
+          color: #1e90ff;
+        }
+      }
+    }
+  }
+}
+
+.spin {
+  animation: spin_1134 2.5s linear infinite;
+  transform-origin: 50% 50%;
+}
+
+@keyframes spin_1134 {
+  0% { transform:rotate(0deg) }
+  60% { transform:rotate(359deg) }
+  100% { transform:rotate(359deg) }
+}
+
+.pagination>nav {
+  position: fixed;
+  bottom: 20px;
+  left: 180px;
+}
+
+.pagination>li>a {          
+  border: none;     /*枠線をなくす*/
+  color: #696969;   /*文字の色を変える*/
+  border-radius: 50%;
+  font-size: 20px;
+}
+
+/* 表示しているページ番号のデザイン */
+.pagination>.active>a {     
+  background: #93c9ff;     /*背景の色を変える*/
+}

@@ -1,0 +1,24 @@
+!!!
+%html
+  %head
+    %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
+    %title Laview
+    = csrf_meta_tags
+    = csp_meta_tag
+    %link{:crossorigin => "anonymous", :href => "https://use.fontawesome.com/releases/v5.8.2/css/all.css", :integrity => "sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay", :rel => "stylesheet"}/
+    = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload'
+    = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
+  %body
+    .header
+      .header__content
+        .header__content__left
+          = fa_icon 'plane', class: 'header__content__left__font-awesome spin'
+          = link_to "LaView", root_path, class: 'logo'
+        .header__content__right
+          = link_to "アルバム作成", new_album_path, class: 'btn new-album__btn'
+   
+    .loader-wrap
+      .loader
+
+    = yield
+    = render 'layouts/notifications'

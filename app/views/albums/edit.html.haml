@@ -1,0 +1,6 @@
+.new-album
+  = form_for @album, class: 'new-album-content', method: :patch do |f|
+    %h3.new-album-content__top
+      アルバム名の変更
+    = f.text_field :name, placeholder: @album.name, class: 'new-album-content__form form-control-lg'
+    = f.submit '変更', class: 'new-album-content__btn'
