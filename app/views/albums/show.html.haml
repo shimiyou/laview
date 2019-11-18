@@ -4,6 +4,7 @@
       = link_to album_post_path(@album.id, post.id) do
         .album-page-content__image
           = image_tag post.image.url.to_s
+
     .pagination
       = paginate @posts
     = link_to '編集', edit_album_path(@album.id), class: 'edit-btn'
