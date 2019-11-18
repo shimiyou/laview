@@ -60,13 +60,31 @@
 
   .add-btn {
     font-size: 30px;
-    background-color: #1e90ff;
+    background-color: #0000ff;
     color: #fff;
     border-radius: 50%;
     padding: 10px;
     text-decoration: none;
     position: fixed;
     right: 360px;
+    bottom: 20px;
+
+    &:hover {
+      border: 3px solid #0000ff;
+      background-color: #fff;
+      color: #0000ff;
+    }
+  }
+
+  .return-btn {
+    font-size: 30px;
+    background-color: #1e90ff;
+    color: #fff;
+    border-radius: 50%;
+    padding: 10px;
+    text-decoration: none;
+    position: fixed;
+    left: 180px;
     bottom: 20px;
 
     &:hover {
