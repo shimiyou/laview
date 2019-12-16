@@ -2,7 +2,7 @@
   .post-show-contents__content
     %h1.post-show-contents__content__title
       = @post.title
-    = image_tag @post.image.url, class:'post-show-contents__content--left__image'
+    = image_tag @post.image.url.to_s, class:'post-show-contents__content--left__image'
     %p.post-show-contents__content__text
       = safe_join(@post.text.split("\n"),tag(:br))
     = link_to '戻る', album_path(@post.album_id), class: 'return-btn'
