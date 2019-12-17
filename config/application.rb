@@ -19,4 +19,3 @@ module Laview
   end
 end
 
-config.autoload_paths += Dir[Rails.root.join('app', 'uploaders')]
