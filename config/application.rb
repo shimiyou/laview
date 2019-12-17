@@ -18,3 +18,5 @@ module Laview
     config.i18n.default_locale = :ja
   end
 end
+
+config.autoload_paths += Dir[Rails.root.join('app', 'uploaders')]
