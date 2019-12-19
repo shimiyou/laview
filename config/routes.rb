@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   resources :albums do
     resources :posts
   end
-  resources :album do
+  resources :albums do
     resources :favorites, only: [:create, :destroy]
   end
 end
