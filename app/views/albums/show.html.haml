@@ -1,13 +1,15 @@
 .album-page
+  .album-page-background#bookblock
+    = image_tag 'クローバー.png', class: 'album-page-background__image'
   .album-page-content
     - @posts.each do |post|
       = link_to album_post_path(@album.id, post.id) do
         .album-page-content__image
           = image_tag post.image.url.to_s
 
-    .pagination
-      = paginate @posts
-    = link_to '閉じる', root_path, class: 'return-btn'
-    = link_to '編集', edit_album_path(@album.id), class: 'edit-btn'
-    = link_to '追加', new_album_post_path(@album.id), class: 'add-btn'
-    = link_to '削除', album_path(@album.id), method: :delete, class: 'delete-btn', data: {confirm: 'アルバムを削除しますか？'}
+  .pagination
+    = paginate @posts
+  = link_to '閉じる', root_path, class: 'return-btn'
+  = link_to '編集', edit_album_path(@album.id), class: 'edit-btn'
+  = link_to '追加', new_album_post_path(@album.id), class: 'add-btn'
+  = link_to '削除', album_path(@album.id), method: :delete, class: 'delete-btn', data: {confirm: 'アルバムを削除しますか？'}
