@@ -5,7 +5,7 @@
     - @posts.each do |post|
       = link_to album_post_path(@album.id, post.id) do
         .album-page-content__image
-          = image_tag post.image.url.to_s
+          = image_tag post.image.url.to_s, size: '430x260'
 
   .pagination
     = paginate @posts
