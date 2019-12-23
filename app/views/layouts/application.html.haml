@@ -6,6 +6,8 @@
     = csrf_meta_tags
     = csp_meta_tag
     %link{crossorigin: "anonymous", href: "https://use.fontawesome.com/releases/v5.8.2/css/all.css", integrity: "sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay", rel: "stylesheet"}/
+    %link{href: "https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.7.1/css/lightbox.css", rel: "stylesheet"}/
+    %script{src: "https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js", type: "text/javascript"}
     = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload'
     = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
   %body
@@ -25,3 +27,4 @@
 
     = yield
     = render 'layouts/notifications'
+    %script{src: "https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.7.1/js/lightbox.min.js", type: "text/javascript"}
