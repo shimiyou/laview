@@ -7,6 +7,12 @@
         = f.label :image, for: 'input-image', class: 'form-control cursor' do
           = fa_icon 'image'
           = f.file_field :image, placeholder: @post.image, id: 'input-image', class: 'input-default'
-        = f.text_field :title, placeholder: @post.title, class: 'form-control'
-        = f.text_area :text, placeholder: @post.text, class: 'form-control post-textarea'
+        - if @post.title.present?
+          = f.text_field :title, placeholder: @post.title, class: 'form-control'
+        - else
+          = f.text_field :title, placeholder: "タイトル", class: 'form-control'
+        - if @post.text.present?
+          = f.text_area :text, placeholder: @post.text, class: 'form-control post-textarea'
+        - else
+          = f.text_area :text, placeholder: "内容", class: 'form-control post-textarea'
         = f.submit '変更', class: 'submit-btn'
