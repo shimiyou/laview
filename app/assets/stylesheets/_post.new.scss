@@ -12,6 +12,16 @@
     margin-top: 40px;
   }
 
+  .container-left {
+    float: left;
+    width: 49%;
+  }
+
+  .container-right {
+    float: right;
+    width: 49%;
+  }
+
   .form-control {
     margin-bottom: 10px;
   }
@@ -20,12 +30,24 @@
     cursor: pointer;
   }
 
+  .form-image {
+    height: 488px;
+  }
+
+  .image-icon {
+    font-size: 50px;
+    line-height: 488px;
+    display: flex; /* 子要素をflexboxで揃える */
+    justify-content: center; /* 子要素をflexboxにより中央に配置する */
+    align-items: center;  /* 子要素をflexboxにより中央に配置する */
+  }
+
   .input-default {
     display: none;
   }
 
   .post-textarea {
-    height: 400px;
+    height: 440px;
   }
 
   .submit-btn {
