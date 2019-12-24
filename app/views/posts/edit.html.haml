@@ -4,15 +4,21 @@
       = form_for @post, url: album_post_path, method: :patch do |f|
         %h3
           おもいで
-        = f.label :image, for: 'input-image', class: 'form-control cursor' do
-          = fa_icon 'image'
-          = f.file_field :image, placeholder: @post.image, id: 'input-image', class: 'input-default'
-        - if @post.title.present?
-          = f.text_field :title, placeholder: @post.title, class: 'form-control'
-        - else
-          = f.text_field :title, placeholder: "タイトル", class: 'form-control'
-        - if @post.text.present?
-          = f.text_area :text, placeholder: @post.text, class: 'form-control post-textarea'
-        - else
-          = f.text_area :text, placeholder: "内容", class: 'form-control post-textarea'
+        .container-left
+          = f.label :image, class: 'form-control cursor form-image' do
+            #img_field{onclick: "$('#file').click()"}
+              - if @post.image.url.present?
+                = image_tag @post.image.url, width: '430', id: 'image-preview'
+              - else
+                = fa_icon 'image', class: 'image-icon', id: 'image-prev'
+          = f.file_field :image, placeholder: @post.image, class: 'input-default', id: 'file'
+        .container-right
+          - if @post.title.present?
+            = f.text_field :title, placeholder: @post.title, class: 'form-control'
+          - else
+            = f.text_field :title, placeholder: "タイトル", class: 'form-control'
+          - if @post.text.present?
+            = f.text_area :text, placeholder: @post.text, class: 'form-control post-textarea'
+          - else
+            = f.text_area :text, placeholder: "内容", class: 'form-control post-textarea'
         = f.submit '変更', class: 'submit-btn'
