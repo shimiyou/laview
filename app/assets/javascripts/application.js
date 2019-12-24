@@ -11,12 +11,12 @@
 // about supported directives.
 //
 //= require jquery3
+//= require popper
+//= require bootstrap-sprockets
 //= require rails-ujs
 //= require data-confirm-modal
 //= require activestorage
 //= require turbolinks
-//= require popper
-//= require bootstrap-sprockets
 //= require_tree .
 
 document.addEventListener(
