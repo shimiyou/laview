@@ -9,7 +9,7 @@
     font-size: 50px;
     text-align: center;
     padding-top: 10px;
-    margin-top: 40px;
+    margin-top: 20px;
   }
 
   .container-left {
@@ -20,6 +20,16 @@
   .container-right {
     float: right;
     width: 49%;
+
+    .date-select {
+      background-color: #fff;
+      color: #495057;
+      border-radius: 0.25rem;
+      margin-bottom: 10px;
+      height: calc(1.5em + 0.75rem + 2px);
+      width: 20%;
+      border: 1px solid #ced4da;
+    }
   }
 
   .form-control {
@@ -31,12 +41,12 @@
   }
 
   .form-image {
-    height: 488px;
+    height: 536px;
   }
 
   .image-icon {
     font-size: 50px;
-    line-height: 488px;
+    line-height: 536px;
     display: flex; /* 子要素をflexboxで揃える */
     justify-content: center; /* 子要素をflexboxにより中央に配置する */
     align-items: center;  /* 子要素をflexboxにより中央に配置する */
