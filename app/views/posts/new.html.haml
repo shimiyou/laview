@@ -13,6 +13,7 @@
                 = fa_icon 'image', class: 'image-icon', id: 'image-prev'
           = f.file_field :image, class: 'input-default', id: 'file'
         .container-right
+          = f.date_select :image_date, {use_month_numbers: true, prompt: "--", start_year: Time.now.year, end_year: 1900, date_separator: '/'}, {class: 'date-select'}
           = f.text_field :title, placeholder: "タイトル", class: 'form-control'
           = f.text_area :text, placeholder: "内容", class: 'form-control post-textarea'
         = f.submit '追加', class: 'submit-btn'

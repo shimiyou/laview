@@ -13,6 +13,10 @@
                 = fa_icon 'image', class: 'image-icon', id: 'image-prev'
           = f.file_field :image, placeholder: @post.image, class: 'input-default', id: 'file'
         .container-right
+          - if @post.image_date.present?
+            = f.date_select :image_date, {use_month_numbers: true, prompt: @post.image_date, start_year: Time.now.year, end_year: 1900, date_separator: '/'}, {class: 'date-select'}
+          - else
+            = f.date_select :image_date, {use_month_numbers: true, prompt: "--", start_year: Time.now.year, end_year: 1900, date_separator: '/'}, {class: 'date-select'}
           - if @post.title.present?
             = f.text_field :title, placeholder: @post.title, class: 'form-control'
           - else

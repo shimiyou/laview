@@ -4,6 +4,8 @@
       = @post.title
     %a{"data-lightbox": "image", href: @post.image.url}
       = image_tag @post.image.url, size: '430x260', class:'post-show-contents__content--left__image'
+    .post-show-contents__content__image_date
+      = @post.image_date
     %p.post-show-contents__content__text
       = safe_join(@post.text.split("\n"),tag(:br))
     = link_to '戻る', album_path(@post.album_id), class: 'return-btn'
