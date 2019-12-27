@@ -1,6 +1,6 @@
 class AlbumsController < ApplicationController
   def index
-    @albums = current_user.albums.page(params[:page]).per(6)
+    @albums = current_user.albums.page(params[:page]).per(6).order('id DESC')
   end
 
   def new
