@@ -12,7 +12,11 @@ class AlbumsController < ApplicationController
     if @album.save
       redirect_to new_album_post_path(@album.id)
     else
-      flash.now[:alert] = 'アルバム名を入力してください'
+      if @album.color.present? == false
+        flash.now[:alert] = 'アルバムを選択してください'
+      else
+        flash.now[:alert] = 'アルバム名を入力してください'
+      end
       render :new
     end
   end
@@ -38,13 +42,17 @@ class AlbumsController < ApplicationController
     if @album.update(album_params)
       redirect_to album_path(@album.id)
     else
-      flash.now[:alert] = 'アルバム名を入力してください'
+      if @album.color.present? == false
+        flash.now[:alert] = 'アルバムを選択してください'
+      else
+        flash.now[:alert] = 'アルバム名を入力してください'
+      end
       render :edit
     end
   end
 
   private
   def album_params
-    params.require(:album).permit(:name).merge(user_id: current_user.id)
+    params.require(:album).permit(:color, :name).merge(user_id: current_user.id)
   end
 end

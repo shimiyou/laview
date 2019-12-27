@@ -1,11 +1,16 @@
 .album-page
-  .album-page-background#bookblock
-    = image_tag 'クローバー.png', class: 'album-page-background__image'
+  .album-page-background
+    - if @album.color == "green"
+      = image_tag '/クローバー.png', class: 'album-page-background__image'
+    - elsif @album.color == "purple"
+      = image_tag '/バタフライ.png', class: 'album-page-background__image'
+    - else
+      = image_tag '/フラワー.png', class: 'album-page-background__image'
   .album-page-content
     - @posts.each do |post|
       = link_to album_post_path(@album.id, post.id) do
         .album-page-content__image
-          = image_tag post.image.url.to_s, size: '430x260'
+          = image_tag post.image.url.to_s, size: '400x240'
 
   .pagination
     = paginate @posts
