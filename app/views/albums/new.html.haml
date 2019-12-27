@@ -1,6 +1,17 @@
-.new-album
-  = form_for @album, class: 'new-album-content' do |f|
-    %h3.new-album-content__top
+.album__new
+  .album__new__contents
+    %h1.album__new__contents__title
       新しいアルバム
-    = f.text_field :name, placeholder: "アルバム名を入力してください", class: 'new-album-content__form form-control-lg'
-    = f.submit 'おもいで', class: 'new-album-content__btn'
+    = form_for @album do |f|
+      .album__new__contents__select
+        = f.label :color, :green, for: 'color1', class: 'album__new__contents__select__green' do
+          = f.radio_button :color, :green, id: 'color1'
+          = image_tag '/クローバー.png', class: 'album__new__contents__select__green__image'
+        = f.label :color, :purple, for: 'color2', class: 'album__new__contents__select__purple' do
+          = f.radio_button :color, :purple, id: 'color2'
+          = image_tag '/バタフライ.png', class: 'album__new__contents__select__purple__image'
+        = f.label :color, :red, for: 'color3', class: 'album__new__contents__select__red' do
+          = f.radio_button :color, :red, id: 'color3'
+          = image_tag '/フラワー.png', class: 'album__new__contents__select__red__image'
+      = f.text_field :name, placeholder: "アルバム名を入力してください", class: 'album__new__contents__name form-control-lg'
+      = f.submit 'おもいで', class: 'album__new__contents__btn'
