@@ -4,7 +4,12 @@
       .album__name
         = album.name
       .album__image
-        = fa_icon 'book'
+        - if album.color == "green"
+          = fa_icon 'book', class: 'album__image__green'
+        - elsif album.color == "purple"
+          = fa_icon 'book', class: 'album__image__purple'
+        - else
+          = fa_icon 'book', class: 'album__image__red'
 
 .bird-icon.passing
   = fa_icon 'fighter-jet'

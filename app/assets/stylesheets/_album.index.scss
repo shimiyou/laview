@@ -22,10 +22,21 @@
     }
 
     &__image {
-      color: #3cb371;
       font-size: 200px;
       text-align: center;
       line-height: 10px;
+
+      &__green {
+        color: rgb(70, 185, 70);
+      }
+
+      &__purple {
+        color: rgb(171, 92, 196);
+      }
+
+      &__red {
+        color: rgb(240, 84, 84);
+      }
     }
   }
 }
