@@ -11,32 +11,38 @@
     width: 850px;
     height: 600px;
     text-align: center;
-    display: flex;
-    justify-content: space-around;
 
-    &__left {
-      margin-top: 140px;
-
-      &__title {
-        margin-bottom: 50px;
-      }
-
-      &__image_date {
-        display: block;
-        text-align: right;
-      }
+    &__title {
+      font-size: 50px;
+      font-weight: bold;
+      padding-top: 100px;
+      border-bottom: 10px solid orange;
     }
 
-    &__right {
-      margin-top: 100px;
+    &__contain {
+      display: flex;
+      justify-content: space-around;
 
-      &__text {
-        width: 300px;
-        height: 460px;
-        overflow: scroll;
+      &__left {
+        margin-top: 40px;
+
+        &__image_date {
+          display: block;
+          text-align: right;
+        }
+      }
+
+      &__right {
         margin-top: 20px;
-        font-size: 20px;
-        text-align: left;
+
+        &__text {
+          width: 300px;
+          height: 370px;
+          overflow: scroll;
+          margin-top: 20px;
+          font-size: 20px;
+          text-align: left;
+        }
       }
     }
   }
