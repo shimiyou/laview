@@ -1,10 +1,9 @@
 .post-show-contents {
-  margin: 100px 100px 0;
-  background-image: url('https://illustimage.com/photo/1609.png');
-  background-repeat: no-repeat;                         /* 画像の繰り返しを指定  */      
-  background-position: center;                     /* 画像の表示位置を指定  */
-  background-size: 1100px 700px;                               /* 画像のサイズを指定    */
-  height: 700px;
+  background-color: rgba(248,248,248,0.8);
+  width: 1000px;
+  margin: 120px auto 0;
+  padding-top: 60px;
+  border-radius: 10px;
 
   &__content {
     margin: 0 auto;
@@ -15,7 +14,9 @@
     &__title {
       font-size: 50px;
       font-weight: bold;
-      padding-top: 100px;
+      padding: 10px 0;
+      border-top: 7px solid skyblue;
+      border-bottom: 7px solid skyblue;
     }
 
     &__contain {
@@ -23,7 +24,11 @@
       justify-content: space-around;
 
       &__left {
-        margin-top: 40px;
+        margin-top: 70px;
+
+        &__image {
+          border: 10px double skyblue;
+        }
 
         &__image_date {
           display: block;
@@ -32,15 +37,16 @@
       }
 
       &__right {
-        margin-top: 20px;
+        margin-top: 40px;
 
         &__text {
-          width: 300px;
+          width: 350px;
           height: 370px;
           overflow: scroll;
-          margin-top: 20px;
+          padding: 20px;
           font-size: 20px;
           text-align: left;
+          border: 3px dashed skyblue;
         }
       }
     }
@@ -54,8 +60,8 @@
     padding: 10px;
     text-decoration: none;
     position: fixed;
-    right: 180px;
-    bottom: 20px;
+    right: 250px;
+    bottom: 50px;
 
     &:hover {
       border: 3px solid #ff4500;
@@ -72,8 +78,8 @@
     padding: 10px;
     text-decoration: none;
     position: fixed;
-    right: 270px;
-    bottom: 20px;
+    right: 340px;
+    bottom: 50px;
 
     &:hover {
       border: 3px solid #008b8b;
@@ -90,8 +96,8 @@
     padding: 10px;
     text-decoration: none;
     position: fixed;
-    left: 180px;
-    bottom: 20px;
+    left: 250px;
+    bottom: 50px;
 
     &:hover {
       border: 3px solid #1e90ff;
