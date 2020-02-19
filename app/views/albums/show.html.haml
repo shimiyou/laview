@@ -10,11 +10,11 @@
     - @posts.each do |post|
       = link_to album_post_path(@album.id, post.id) do
         .album-page-content__image
-          = image_tag post.image.url.to_s, size: '400x240'
+          = image_tag post.image.url.to_s, size: '400x260'
 
   .pagination
     = paginate @posts
   = link_to '閉じる', root_path, class: 'return-btn'
   = link_to '編集', edit_album_path(@album.id), class: 'edit-btn'
   = link_to '追加', new_album_post_path(@album.id), class: 'add-btn'
-  = link_to '削除', album_path(@album.id), method: :delete, class: 'delete-btn', data: {confirm: '本当に削除しますか？', cancel: 'やめる', commit: '削除する'}, title: 'アルバム削除'
+  = link_to '削除', album_path(@album.id), method: :delete, class: 'delete-btn', data: {confirm: '本当に削除しますか？', cancel: 'やめる', commit: '削除'}, title: 'アルバム削除'
