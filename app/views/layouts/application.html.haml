@@ -19,7 +19,7 @@
         .header__content__right
           .header__content__right__user__name
             = current_user.name
-          = link_to "ログアウト", destroy_user_session_path, method: :delete, class: 'btn logout-btn', data: {confirm: 'ログアウトしますか？'}
+          = link_to "ログアウト", destroy_user_session_path, method: :delete, class: 'btn logout-btn', data: {confirm: 'ログアウトしますか？', cancel: 'やめる', commit: 'ログアウト'}, title: 'ログアウト'
           = link_to "アルバム作成", new_album_path, class: 'btn new-album__btn'
    
     /.loader-wrap
