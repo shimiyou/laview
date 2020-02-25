@@ -9,18 +9,18 @@
             = f.radio_button :color, :green, checked: true, id: 'color1'
           - else
             = f.radio_button :color, :green, id: 'color1'
-          = image_tag '/クローバー.png', class: 'album__new__contents__select__green__image'
+          = image_tag 'クローバー.png', class: 'album__new__contents__select__green__image'
         = f.label :color, :purple, for: 'color2', class: 'album__new__contents__select__purple' do
           - if @album.color == "purple"
             = f.radio_button :color, :purple, checked: true, id: 'color2'
           - else
             = f.radio_button :color, :purple, id: 'color2'
-          = image_tag '/バタフライ.png', class: 'album__new__contents__select__purple__image'
+          = image_tag 'バタフライ.png', class: 'album__new__contents__select__purple__image'
         = f.label :color, :red, for: 'color3', class: 'album__new__contents__select__red' do
           - if @album.color == "red"
             = f.radio_button :color, :red, checked: true, id: 'color3'
           - else
             = f.radio_button :color, :red, id: 'color3'
-          = image_tag '/フラワー.png', class: 'album__new__contents__select__red__image'
+          = image_tag 'フラワー.png', class: 'album__new__contents__select__red__image'
       = f.text_field :name, placeholder: "アルバム名を入力してください", class: 'album__new__contents__name form-control-lg'
       = f.submit '変更', class: 'album__new__contents__btn'
